@@ -1,1 +1,3 @@
 #Demo file with requirements
+
+pandas>=1.3
