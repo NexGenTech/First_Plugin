@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+"-e ." = "*"
 PyYAML = ">=6.0"
 requests = "*"
 
