@@ -1,4 +1,4 @@
-from Plugins.plugin import Plugin
+from plugin import Plugin
 import requests
 
 ip_address= "192.168.1.235"
