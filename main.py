@@ -19,3 +19,9 @@ import inspect
 for name, member in inspect.getmembers(FirstPlugin(), inspect.ismethod):
     if not name.startswith('_'):
         globals()[name] = member
+
+if __name__ == '__main__':
+    plugin = FirstPlugin()
+    plugin.activate()
+    plugin.run()
+    plugin.deactivate()
