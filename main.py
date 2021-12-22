@@ -23,5 +23,5 @@ for name, member in inspect.getmembers(FirstPlugin(), inspect.ismethod):
 if __name__ == '__main__':
     plugin = FirstPlugin()
     plugin.activate()
-    plugin.run()
+    #plugin.run()
     plugin.deactivate()
