@@ -24,7 +24,7 @@ import sys
 import json
 
 if __name__ == '__main__':
-    pl = json.loads(sys.argv[0])
+    pl = json.loads(sys.argv[1])
     plugin = FirstPlugin(pl['id'], pl['active'], pl['name'], pl['description'],
                          pl['url'], pl['protocols'], pl['ports'])
     plugin.activate()
