@@ -20,8 +20,13 @@ for name, member in inspect.getmembers(FirstPlugin(), inspect.ismethod):
     if not name.startswith('_'):
         globals()[name] = member
 
+import sys
+import json
+
 if __name__ == '__main__':
-    plugin = FirstPlugin()
+    pl = json.loads(sys.argv[0])
+    plugin = FirstPlugin(pl['id'], pl['active'], pl['name'], pl['description'],
+                         pl['url'], pl['protocols'], pl['ports'])
     plugin.activate()
     #plugin.run()
     plugin.deactivate()
