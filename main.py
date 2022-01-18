@@ -12,14 +12,14 @@ class FirstPlugin(Plugin):
             print(x.text)
         else:
             print("The First Plugin can not run because it is not activated")
-
-# Inserts all the methods that their names do nopt start with a '_' into the globals() dictionary 
+'''
+# Inserts all the methods that their names do not start with a '_' into the globals() dictionary 
 # so that they can be executed
 import inspect
 for name, member in inspect.getmembers(FirstPlugin(), inspect.ismethod):
     if not name.startswith('_'):
         globals()[name] = member
-
+'''
 import sys
 import json
 
